@@ -37,3 +37,10 @@ func TestFactorial(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkFactorial(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		factorial, _ := Factorial.Factorial(20)
+		_ = factorial
+	}
+}
